@@ -7,6 +7,7 @@
 #include "DSF.hpp"
 #include "BinarySearch.hpp"
 #include "Tree.hpp"
+#include "TwoPoints.hpp"
 
 void selectSort(std::vector<int>&arr) {
 	int n = arr.size();
@@ -109,6 +110,11 @@ int main()
 	cout << "Tree Search Start:" << endl;
 	tree_seach_test();
 	cout << endl;
+
+	cout << "Two Points:" << endl;
+	testTwoPoints();
+	cout << endl;
+
 	getchar();
 }
 

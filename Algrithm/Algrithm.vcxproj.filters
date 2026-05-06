@@ -38,5 +38,8 @@
     <ClInclude Include="Tree.hpp">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="TwoPoints.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
