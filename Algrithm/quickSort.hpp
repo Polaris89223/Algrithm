@@ -3,7 +3,7 @@
 #include <vector>
 int partition(std::vector<int>&arr, int low, int high) {
 	int pivot = arr[high]; //选择最后一元素作为基准
-	int i = low - 1;
+	int i = low-1;
 	for (int j = low; j < high; j++) {
 		if (arr[j] < pivot) {
 			i++;

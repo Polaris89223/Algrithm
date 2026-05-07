@@ -41,5 +41,11 @@
     <ClInclude Include="TwoPoints.hpp">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="bubbleSort.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="selectSort.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
