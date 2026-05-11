@@ -158,6 +158,7 @@
     <ClInclude Include="BSF.hpp" />
     <ClInclude Include="bubbleSort.hpp" />
     <ClInclude Include="DSF.hpp" />
+    <ClInclude Include="heapSort.hpp" />
     <ClInclude Include="mergeSort.hpp" />
     <ClInclude Include="quickSort.hpp" />
     <ClInclude Include="selectSort.hpp" />

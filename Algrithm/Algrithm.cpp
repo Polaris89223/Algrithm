@@ -9,11 +9,12 @@
 #include "TwoPoints.hpp"
 #include "selectSort.hpp"
 #include "bubbleSort.hpp"
+#include "heapSort.hpp"
 int main()
 {
 	//选择排序
 	std::cout << "selectSort:" << std::endl;
-	std::vector<int> arr2 = { 10,9,8,7,6,5,4,3,2,1 };
+	std::vector<int> arr2 = { 9,10,6,8,7,5,3,4,2,1};
 	for (int i : arr2) {
 		std::cout << i << " ";
 	}
@@ -22,7 +23,7 @@ int main()
 
 	//冒泡排序
 	std::cout << "bubbleSort:" << std::endl;
-	std::vector<int> arr3 = { 10,9,8,7,6,5,4,3,2,1 };
+	std::vector<int> arr3 = { 9,10,6,8,7,5,3,4,2,1 };
 	for (int i : arr3) {
 		std::cout << i << " ";
 	}
@@ -30,7 +31,7 @@ int main()
 	bubleSort(arr3);
 
 	//快速排序
-	std::vector<int> arr = { 10,9,8,7,6,5,4,3,2,1 };
+	std::vector<int> arr = { 9,10,6,8,7,5,3,4,2,1 };
 	std::cout << "quickSort:" << std::endl;
 	for (int i : arr) {
 		std::cout << i << " ";
@@ -40,12 +41,21 @@ int main()
 
 	//归并排序
 	std::cout << "mergeSort:" << std::endl;
-	std::vector<int> arr1 = { 10,9,8,7,6,5,4,3,2,1 };
+	std::vector<int> arr1 = { 9,10,6,8,7,5,3,4,2,1 };
 	for (int i : arr1) {
 		std::cout << i << " ";
 	}
 	std::cout << std::endl;
 	mergeSort(arr1, 0, arr1.size() - 1);
+
+	//堆排序
+	std::cout << "heapSort:" << std::endl;
+	std::vector<int> arr4 = { 9,10,6,8,7,5,3,4,2,1 };
+	for (int i : arr4) {
+		std::cout << i << " ";
+	}
+	std::cout << std::endl;
+	heapSort(arr4);
 
 	//广度优先搜索
 	std::cout << "BFS:" << std::endl;

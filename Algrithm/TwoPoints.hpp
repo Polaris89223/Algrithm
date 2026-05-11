@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <assert.h>
 #include <unordered_set>
 //快慢指针(龟兔赛跑)
 //链表是否有环检测
@@ -24,6 +25,26 @@ bool hasCycle(ListNode*head) {
 	}
 	return false;
 }
+
+ListNode* reverseList(struct ListNode* head) {
+	ListNode *prev = NULL, *next = NULL;
+	while (head) {
+		next = head->next;
+		head->next = prev;
+		prev = head;
+		head = next;
+	}
+	return prev;
+}
+void PrintList(ListNode*head) {
+	ListNode* cur = head;
+	while (cur) {
+		cout << cur->val<<" ";
+		cur = cur->next;
+	}
+	cout << endl;
+}
+
 //2.对撞指针(左右指针)
 //求有序数组的两数之和
 vector<int> twoSum(vector<int>&numbers, int target) {
@@ -93,6 +114,20 @@ vector<int> merge(vector<int>nums1, int m, vector<int>nums2, int n) {
 	}
 	return mergeNums;
 }
+//5.对象指针,字符串逆序
+void reverseStr(std::string&str) {
+	int left = 0;
+	int right = str.size() - 1;
+	while (left < right) {
+		std::swap(str[left], str[right]);
+		left++;
+		right--;
+	}
+}
+void strcopy(char* dst, const char*src) {
+	if (nullptr == src || nullptr == dst) return;
+	while ((*dst++ = *src++) != '\0'){}
+}
 
 void testTwoPoints() {
 	ListNode* head = nullptr;
@@ -115,6 +150,11 @@ void testTwoPoints() {
 	tail->next = head;
 	bret = hasCycle(head);
 	cout << "LinkList Cycle after:" << bret << endl;
+	tail->next = nullptr;
+	head = reverseList(head);
+	cout << "LinkList reverseList:"<<endl;
+	PrintList(head);
+
 
 	vector<int> arr1 = { 2,4,6,8,10 };
 	auto index = twoSum(arr1, 18);
@@ -143,7 +183,18 @@ void testTwoPoints() {
 		cout << i;
 	}
 	cout << endl;
-	
+
+	//字符串逆序
+	string str1 = "hello,world";
+	cout << "Origin Str:" << str1.data() << endl;
+	reverseStr(str1);
+	cout << "Reverse Str:" << str1.data() << endl;
+
+	//字符串拷贝
+	char src[] = "I am StryCopy";
+	char dst[64] = { 0 };
+	strcopy(dst, src);
+	cout << "dst Str:" << dst << endl;
 }
 
 

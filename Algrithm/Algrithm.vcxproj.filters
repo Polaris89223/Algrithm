@@ -47,5 +47,8 @@
     <ClInclude Include="selectSort.hpp">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="heapSort.hpp">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
